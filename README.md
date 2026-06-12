@@ -44,7 +44,13 @@ Here is what the dashboard looks like in action:
 
 #### 2. The Netspace Main HUD
 ![3D Netspace City](screenshots/netspace_main.png)
-*The main 3D visualization. Every glowing tower represents a host on your network.*
+*Wide tactical view of the holographic netspace host city.*
+
+![3D Netspace City Overhead](screenshots/netspace_overhead.png)
+*Overhead projection of the netspace city topology.*
+
+![3D Netspace City Low Angle](screenshots/netspace_low_angle.png)
+*Close-up low-angle view showing active subgrid connections.*
 
 #### 3. System Console & Telemetry Commands
 ![Console Commands](screenshots/console_commands.png)
@@ -61,6 +67,34 @@ Here is what the dashboard looks like in action:
 #### 6. System Operator Help Manual
 ![Operator Manual](screenshots/help_overlay.png)
 *Fly-through navigation instructions, keyboard controls, and daemon command list.*
+
+![Operator Manual HUD View](screenshots/help_overlay_detail.png)
+*HUD overlay containing navigation controls and network daemon shortcuts.*
+
+#### 7. Spherical Netspace Structure Gallery
+Here is a comprehensive view of the 3D spherical netspace showing real structures at different threat levels, perspectives, and HUD overlays:
+
+* **Netspace Structure & Topology Views**:
+  * **96% Secure Topology (Wide)**
+    ![96% Secure Topology](screenshots/screenshot_3400.png)
+  * **91% Secure Topology (Tactical)**
+    ![91% Secure Topology](screenshots/screenshot_3401.png)
+  * **88% Secure Topology (Alert)**
+    ![88% Secure Topology](screenshots/screenshot_3395.png)
+  * **Alternative Perspectives**:
+    * **Close-up Linkages**: ![Close-up Linkages](screenshots/screenshot_3394.png)
+    * **Orthogonal Angle**: ![Orthogonal Angle](screenshots/screenshot_3393.png)
+    * **Central Core Focus**: ![Central Core Focus](screenshots/screenshot_3399.png)
+
+* **Operator Manual & Diagnostics Overlays**:
+  * **Clean Manual Overlay (Active)**
+    ![Clean Manual Overlay](screenshots/screenshot_3398.png)
+  * **Alternate Manual Diagnostic Layout**
+    ![Alternate Manual Diagnostic](screenshots/screenshot_3402.png)
+  * **Calibration Layout**
+    ![Calibration Layout](screenshots/screenshot_3397.png)
+  * **Playwright DOM Capture View**
+    ![Playwright DOM Capture](screenshots/screenshot_3396.png)
 
 ---
 
