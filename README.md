@@ -36,7 +36,7 @@ Basically, Netrunner is a network defense dashboard with a 3D interface. It capt
 
 ### ++ THE SCREENSHOTS (CHECK THIS OUT!) ++
 
-Here is what the dashboard looks like in action:
+Here is what the dashboard looks like in action: (only the building that grow with time are the real networks rest all are for the fun)
 
 #### 1. The Neural Link Boot Sequence
 ![Neural Link Boot Sequence](screenshots/netos_01_boot.png)
