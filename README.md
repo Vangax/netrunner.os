@@ -39,62 +39,52 @@ Basically, Netrunner is a network defense dashboard with a 3D interface. It capt
 Here is what the dashboard looks like in action:
 
 #### 1. The Neural Link Boot Sequence
-![Boot Calibration](screenshots/boot_ready.png)
-*Calibrating neural linkages and establishing secure connection to the Construct.*
+![Neural Link Boot Sequence](screenshots/netos_01_boot.png)
+*Initializing system protocols, establishing neural interface connection with the host system.*
 
 #### 2. The Netspace Main HUD
-![3D Netspace City](screenshots/netspace_main.png)
-*Wide tactical view of the holographic netspace host city.*
+![Netspace Main HUD](screenshots/netos_02_netspace_main.png)
+*Wide tactical view of the holographic netspace host city and command terminal.*
 
-![3D Netspace City Overhead](screenshots/netspace_overhead.png)
-*Overhead projection of the netspace city topology.*
+#### 3. Breach Protocol Decryption Matrix
+![Breach Protocol](screenshots/netos_03_breach_protocol.png)
+*Solving the code matrix bypass system to access secure files.*
 
-![3D Netspace City Low Angle](screenshots/netspace_low_angle.png)
-*Close-up low-angle view showing active subgrid connections.*
+#### 4. Decrypted Evidence Vault
+![Evidence Vault](screenshots/netos_04_evidence_vault.png)
+*Analyzing decrypted forensics files, connection packets, and trace logs.*
 
-#### 3. System Console & Telemetry Commands
-![Console Commands](screenshots/console_commands.png)
-*Enter commands like `status` or `decoy` to interact with network daemons.*
+#### 5. Subgrid Node Inspector
+![Subgrid Node Inspector](screenshots/netos_05_node_inspector.png)
+*Detail view of a remote host tower showing OS, MAC address, and active ports.*
 
-#### 4. Breach Protocol Decryption Matrix
-![Breach Protocol](screenshots/breach_protocol.png)
-*Solve the hex matrix puzzle to bypass node security and extract evidence.*
+#### 6. Operator Help Manual
+![Operator Help Manual](screenshots/netos_06_controls_manual.png)
+*Help panel overlay detailing command usage and cockpit keyboard shortcuts.*
 
-#### 5. Decrypted Evidence Vault
-![Evidence Vault](screenshots/evidence_vault.png)
-*Review decrypted PCAPs, trace payloads, and see critical exploit indicators.*
+#### 7. Holographic Tower Subgrid Perspective
+![Holographic Tower Subgrid](screenshots/netos_07_netspace_towers.png)
+*Close-up view of instanced voxel structures indicating subgrid host nodes.*
 
-#### 6. System Operator Help Manual
-![Operator Manual](screenshots/help_overlay.png)
-*Fly-through navigation instructions, keyboard controls, and daemon command list.*
+#### 8. Local Core System Metrics
+![Local Core Metrics](screenshots/netos_08_self_core.png)
+*Live display of ICE integrity, signal strength, and network telemetry.*
 
-![Operator Manual HUD View](screenshots/help_overlay_detail.png)
-*HUD overlay containing navigation controls and network daemon shortcuts.*
+#### 9. Overhead Subgrid Projection Map
+![Overhead Projection Map](screenshots/netos_09_overhead.png)
+*Bird's-eye orthogonal projection of the active subgrid network topology.*
 
-#### 7. Spherical Netspace Structure Gallery
-Here is a comprehensive view of the 3D spherical netspace showing real structures at different threat levels, perspectives, and HUD overlays:
+#### 10. Spherical Netspace Dome Network
+![Spherical Netspace Dome](screenshots/netos_10_dome.png)
+*Aesthetic view of the surrounding network grid from the central sphere.*
 
-* **Netspace Structure & Topology Views**:
-  * **96% Secure Topology (Wide)**
-    ![96% Secure Topology](screenshots/screenshot_3400.png)
-  * **91% Secure Topology (Tactical)**
-    ![91% Secure Topology](screenshots/screenshot_3401.png)
-  * **88% Secure Topology (Alert)**
-    ![88% Secure Topology](screenshots/screenshot_3395.png)
-  * **Alternative Perspectives**:
-    * **Close-up Linkages**: ![Close-up Linkages](screenshots/screenshot_3394.png)
-    * **Orthogonal Angle**: ![Orthogonal Angle](screenshots/screenshot_3393.png)
-    * **Central Core Focus**: ![Central Core Focus](screenshots/screenshot_3399.png)
+#### 11. Front Perspective Node Spire
+![Front Perspective Node Spire](screenshots/netos_11_front_spire.png)
+*Direct view facing the primary target host tower.*
 
-* **Operator Manual & Diagnostics Overlays**:
-  * **Clean Manual Overlay (Active)**
-    ![Clean Manual Overlay](screenshots/screenshot_3398.png)
-  * **Alternate Manual Diagnostic Layout**
-    ![Alternate Manual Diagnostic](screenshots/screenshot_3402.png)
-  * **Calibration Layout**
-    ![Calibration Layout](screenshots/screenshot_3397.png)
-  * **Playwright DOM Capture View**
-    ![Playwright DOM Capture](screenshots/screenshot_3396.png)
+#### 12. Critical Threat Level Alert State
+![Critical Threat Level Alert](screenshots/netos_12_threat_red.png)
+*Visual state transformation when active network anomalies are detected.*
 
 ---
 
