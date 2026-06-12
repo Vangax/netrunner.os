@@ -1,0 +1,339 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Rajdhani:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  background-color: #05050a;
+  color: #00f0ff;
+}
+
+.font-display {
+  font-family: 'Rajdhani', 'JetBrains Mono', sans-serif;
+  letter-spacing: 0.12em;
+}
+
+/* ============ CRT Scanlines Overlay ============ */
+.crt-overlay::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 9999;
+  background-size: 100% 4px, 6px 100%;
+  pointer-events: none;
+}
+
+.crt-overlay::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 120px;
+  background: linear-gradient(to bottom, transparent, rgba(0, 240, 255, 0.025), transparent);
+  z-index: 9998;
+  pointer-events: none;
+  animation: crt-band 9s linear infinite;
+}
+
+@keyframes crt-band {
+  0%   { transform: translateY(-140px); }
+  100% { transform: translateY(110vh); }
+}
+
+/* ============ Text + Border Glows ============ */
+.text-glow-cyan {
+  text-shadow: 0 0 8px rgba(0, 240, 255, 0.6), 0 0 15px rgba(0, 240, 255, 0.4);
+}
+
+.text-glow-red {
+  text-shadow: 0 0 8px rgba(255, 0, 68, 0.7), 0 0 18px rgba(255, 0, 68, 0.45);
+}
+
+.text-glow-magenta {
+  text-shadow: 0 0 8px rgba(255, 0, 170, 0.6), 0 0 15px rgba(255, 0, 170, 0.4);
+}
+
+.border-glow-cyan {
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.4), inset 0 0 10px rgba(0, 240, 255, 0.2);
+}
+
+.border-glow-magenta {
+  box-shadow: 0 0 10px rgba(255, 0, 170, 0.4), inset 0 0 10px rgba(255, 0, 170, 0.2);
+}
+
+/* ============ Cyberdeck HUD Frames ============ */
+.hud-frame {
+  position: relative;
+  background:
+    linear-gradient(135deg, rgba(0, 240, 255, 0.07) 0%, transparent 30%),
+    rgba(3, 6, 12, 0.88);
+  border: 1px solid rgba(0, 240, 255, 0.35);
+  clip-path: polygon(
+    14px 0, 100% 0, 100% calc(100% - 14px),
+    calc(100% - 14px) 100%, 0 100%, 0 14px
+  );
+  backdrop-filter: blur(4px);
+}
+
+.hud-frame-red {
+  background:
+    linear-gradient(135deg, rgba(255, 0, 68, 0.10) 0%, transparent 30%),
+    rgba(12, 2, 5, 0.88);
+  border-color: rgba(255, 0, 68, 0.5);
+}
+
+.hud-frame-magenta {
+  background:
+    linear-gradient(135deg, rgba(255, 0, 183, 0.08) 0%, transparent 30%),
+    rgba(10, 2, 8, 0.88);
+  border-color: rgba(255, 0, 183, 0.4);
+}
+
+.hud-frame-yellow {
+  background:
+    linear-gradient(135deg, rgba(204, 255, 0, 0.07) 0%, transparent 30%),
+    rgba(8, 10, 2, 0.88);
+  border-color: rgba(204, 255, 0, 0.4);
+}
+
+.hud-sweep {
+  position: relative;
+  overflow: hidden;
+}
+
+.hud-sweep::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 45%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 240, 255, 0.9), transparent);
+  animation: hud-sweep-move 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes hud-sweep-move {
+  0%   { left: -60%; }
+  55%  { left: 110%; }
+  100% { left: 110%; }
+}
+
+.viewport-bracket {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border-color: rgba(0, 240, 255, 0.55);
+  border-style: solid;
+  border-width: 0;
+  z-index: 50;
+  pointer-events: none;
+  filter: drop-shadow(0 0 4px rgba(0, 240, 255, 0.6));
+}
+
+.viewport-bracket.tl { top: 10px; left: 10px; border-top-width: 2px; border-left-width: 2px; }
+.viewport-bracket.tr { top: 10px; right: 10px; border-top-width: 2px; border-right-width: 2px; }
+.viewport-bracket.bl { bottom: 10px; left: 10px; border-bottom-width: 2px; border-left-width: 2px; }
+.viewport-bracket.br { bottom: 10px; right: 10px; border-bottom-width: 2px; border-right-width: 2px; }
+
+/* ============ Holographic flicker for important text ============ */
+@keyframes holo-flicker {
+  0%, 100% { opacity: 1; }
+  92% { opacity: 1; }
+  93% { opacity: 0.4; }
+  94% { opacity: 1; }
+  97% { opacity: 0.7; }
+  98% { opacity: 1; }
+}
+
+.holo-flicker {
+  animation: holo-flicker 5s linear infinite;
+}
+
+/* ============ Glitch animations ============ */
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+    clip-path: inset(0 0 0 0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+    clip-path: inset(20% 0 30% 0);
+  }
+  40% {
+    transform: translate(-1px, -1px);
+    clip-path: inset(50% 0 10% 0);
+  }
+  60% {
+    transform: translate(2px, -2px);
+    clip-path: inset(10% 0 70% 0);
+  }
+  80% {
+    transform: translate(1px, 2px);
+    clip-path: inset(80% 0 5% 0);
+  }
+  100% {
+    transform: translate(0);
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.animate-glitch {
+  animation: glitch 1s infinite alternate-reverse steps(2);
+}
+
+.glitch-text {
+  position: relative;
+  display: inline-block;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.glitch-text::before {
+  color: #ff0044;
+  transform: translate(-1.5px, 0);
+  clip-path: inset(0 0 55% 0);
+  animation: glitch-shift-a 3.2s infinite steps(3);
+}
+
+.glitch-text::after {
+  color: #00f0ff;
+  transform: translate(1.5px, 0);
+  clip-path: inset(55% 0 0 0);
+  animation: glitch-shift-b 2.7s infinite steps(2);
+}
+
+@keyframes glitch-shift-a {
+  0%, 86%, 100% { transform: translate(0); opacity: 0; }
+  88% { transform: translate(-2px, -1px); opacity: 0.85; }
+  92% { transform: translate(2px, 1px); opacity: 0.6; }
+  96% { transform: translate(-1px, 0); opacity: 0.85; }
+}
+
+@keyframes glitch-shift-b {
+  0%, 82%, 100% { transform: translate(0); opacity: 0; }
+  85% { transform: translate(2px, 1px); opacity: 0.8; }
+  90% { transform: translate(-2px, -1px); opacity: 0.55; }
+  95% { transform: translate(1px, 0); opacity: 0.8; }
+}
+
+@keyframes alert-flash {
+  0% { opacity: 0.55; }
+  100% { opacity: 0; }
+}
+
+.alert-flash {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 40%, rgba(255, 0, 68, 0.35) 100%);
+  z-index: 9000;
+  pointer-events: none;
+  animation: alert-flash 0.9s ease-out forwards;
+}
+
+/* ============ Boot sequence ============ */
+@keyframes boot-grid-in {
+  0% { transform: perspective(400px) rotateX(60deg) translateY(80px); opacity: 0; }
+  100% { transform: perspective(400px) rotateX(60deg) translateY(0px); opacity: 1; }
+}
+
+.boot-grid {
+  position: absolute;
+  left: -50%;
+  right: -50%;
+  bottom: -10%;
+  height: 60%;
+  background-image:
+    linear-gradient(rgba(0, 240, 255, 0.22) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 240, 255, 0.22) 1px, transparent 1px);
+  background-size: 42px 42px;
+  transform: perspective(400px) rotateX(60deg);
+  transform-origin: bottom;
+  animation: boot-grid-in 1.4s ease-out forwards, boot-grid-scroll 1.2s linear infinite;
+  mask-image: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+  -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+  pointer-events: none;
+}
+
+@keyframes boot-grid-scroll {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 42px; }
+}
+
+@keyframes cursor-blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+.terminal-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 14px;
+  background: #00f0ff;
+  vertical-align: text-bottom;
+  animation: cursor-blink 0.9s infinite;
+  box-shadow: 0 0 6px #00f0ff;
+}
+
+/* ============ Radar minimap ============ */
+@keyframes radar-sweep {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.radar-sweep-line {
+  animation: radar-sweep 4s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes blip-ping {
+  0% { transform: scale(0.6); opacity: 1; }
+  100% { transform: scale(2.6); opacity: 0; }
+}
+
+/* ============ Scrollbars ============ */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 240, 255, 0.04);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 240, 255, 0.35);
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 240, 255, 0.6);
+}
+
+/* ============ Misc ============ */
+@keyframes pulse-bar {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.55; }
+}
+
+.stat-ticker {
+  font-variant-numeric: tabular-nums;
+}
+
+.hex-chip {
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
