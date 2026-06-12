@@ -7,8 +7,8 @@
     |_| \_|_____| |_|   |_| \_\ \___/|_| \_|_| \_|_____|_| \_\  \___/|____/ 
                                                                              
 ===============================================================================
-              CYBERPUNK NETWORK DEFENSE OPERATING SYSTEM v2.0
-                     [ FOR WINDOWS 11 SYSTEMS ONLY ]
+              NETWORK DEFENSE OPERATING SYSTEM v2.0
+                     [ FOR WINDOWS 11 SYSTEMS ONLY (Easy linux port available) ]
 ===============================================================================
 ```
 
