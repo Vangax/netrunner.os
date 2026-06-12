@@ -18,7 +18,7 @@
   +-----------------------------------------------------+
   |  >>> STATUS: ACTIVE DEVELOPMENT <<<                  |
   |  >>> LATEST UPDATE: REVOLUTIONARY VISUALS <<<        |
-  |  >>> NETWATCH THREAT LEVEL: CATEGORY 4 <<<           |
+ 
   +-----------------------------------------------------+
 ```
 
